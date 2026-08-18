@@ -1,0 +1,41 @@
+import { Component, signal } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
+
+@Component({
+  selector: 'app-root',
+  imports: [RouterOutlet],
+  templateUrl: './app.html',
+  styleUrl: './app.css'
+})
+
+export class App {
+
+  protected readonly title = signal('Sistema de Citas');
+
+  citas = [
+    {
+      cliente: 'Ana Pérez',
+      fecha: '18/08/2026',
+      hora: '10:00',
+      servicio: 'Consulta',
+      estado: 'Confirmada'
+    },
+
+    {
+      cliente: 'Luis García',
+      fecha: '18/08/2026',
+      hora: '11:30',
+      servicio: 'Asesoría',
+      estado: 'Pendiente'
+    },
+
+    {
+      cliente: 'María López',
+      fecha: '19/08/2026',
+      hora: '09:00',
+      servicio: 'Consulta',
+      estado: 'Confirmada'
+    }
+  ];
+
+}

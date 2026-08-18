@@ -1,0 +1,66 @@
+/*contenedor principal de la aplicacion*/
+.contenedor {
+    max-width: 900px;
+    margin: 40px auto;
+    font-family: 'Arial', sans-serif;
+}
+/*Encabezado de la biblioteca*/
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+header h1 {
+    color: #150891;
+}
+
+/*Contiene el buscador y el boton*/
+.acciones {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+/*campo de busqueda*/
+input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+/*botones*/
+button {
+    padding: 10px 16px;
+    border: none;
+    border-radius: 6px;
+    background-color: #2068e4;
+    color: #fff;
+    cursor: pointer;
+}
+
+/*contenedor de las tarjetas*/
+.libros {
+    display: grid;
+    gap: 15px;
+}
+
+/*tarjeta de cada libro*/
+.tarjeta {
+    flex: 1;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: #fcfcfc;
+}
+/*Titulo de cada libro*/
+.tarjeta h2{
+color:#2563eb
+}
+
+/*Pide de la aplicacion*/
+footer{
+    margin-top: 30px;
+    text-align: center;
+    color: #2212ff;
+}

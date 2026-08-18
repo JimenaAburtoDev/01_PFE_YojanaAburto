@@ -1,0 +1,24 @@
+<div class="contenedor">
+<header>
+  <h1>{{title()}}</h1>
+  <p> Encuentra y administra tus libros favoritos</p>
+  </header>  
+
+  <section class="acciones">
+    <input type="text" placeholder="Buscar libro...">
+    <button> Agregar Libro</button>
+  </section>
+  <section class="libros">
+    @for (libro of libros; track libro.titulo) {
+      <div class="tarjeta">
+        <h2> {{libro.titulo}} </h2>
+        <p><strong>autor: </strong> {{libro.autor}} </p>
+        <p><strong>Estado: </strong> {{libro.Estado}} </p>
+        <button> Ver más</button>
+      </div>
+    }
+  </section>
+  <footer>
+    <p>Libros registrados: {{libros.length}}</p>
+  </footer>
+</div>

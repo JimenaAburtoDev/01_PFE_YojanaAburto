@@ -1,0 +1,71 @@
+<div class="contenedor">
+
+  <!-- Encabezado -->
+  <header>
+    <h1>{{title()}}</h1>
+    <p>Administra y consulta tus citas fácilmente</p>
+  </header>
+
+  <!-- Acciones -->
+  <section class="acciones">
+
+    <input
+      type="text"
+      placeholder="Buscar cita..."
+    >
+
+    <button>Registrar Cita</button>
+
+  </section>
+
+  <!-- Citas -->
+  <section class="citas">
+
+    @for (cita of citas; track cita.cliente) {
+
+      <div class="tarjeta">
+
+        <h2>{{cita.cliente}}</h2>
+
+        <p>
+          <strong>Fecha:</strong>
+          {{cita.fecha}}
+        </p>
+
+        <p>
+          <strong>Hora:</strong>
+          {{cita.hora}}
+        </p>
+
+        <p>
+          <strong>Servicio:</strong>
+          {{cita.servicio}}
+        </p>
+
+        <p>
+          <strong>Estado:</strong>
+          {{cita.estado}}
+        </p>
+
+        <button>Ver cita</button>
+
+      </div>
+
+    }
+
+  </section>
+
+  <!-- Pie de página -->
+  <footer>
+
+    <p>
+      Citas registradas: {{citas.length}}
+    </p>
+
+    <p>
+      Desarrollado por Jimena Aburto
+    </p>
+
+  </footer>
+
+</div>
