@@ -1,0 +1,93 @@
+<div class="contenedor">
+
+  <!-- ENCABEZADO -->
+  <header>
+    <h1>{{title()}}</h1>
+    <p>Administra y consulta tus citas fácilmente</p>
+  </header>
+
+
+  <!-- SECCIÓN 1: REGISTRAR CITA -->
+  <section class="acciones">
+
+    <h2>Registrar una nueva cita</h2>
+
+    <input
+      type="text"
+      placeholder="Nombre del cliente..."
+    >
+
+    <button (click)="registrarCita()">
+      Registrar Cita
+    </button>
+
+  </section>
+
+
+  <!-- MENSAJE -->
+  @if (mensaje) {
+    <p class="mensaje">
+      {{mensaje}}
+    </p>
+  }
+
+
+  <!-- SECCIÓN 2: LISTA DE CITAS -->
+  <section class="citas">
+
+    <h2>Próximas Citas</h2>
+
+    @for (cita of citas; track cita.cliente) {
+
+      <div class="tarjeta">
+
+        <h2>{{cita.cliente}}</h2>
+
+        <p>
+          <strong>Fecha:</strong>
+          {{cita.fecha}}
+        </p>
+
+        <p>
+          <strong>Hora:</strong>
+          {{cita.hora}}
+        </p>
+
+        <p>
+          <strong>Servicio:</strong>
+          {{cita.servicio}}
+        </p>
+
+        <p>
+          <strong>Estado:</strong>
+          {{cita.estado}}
+        </p>
+
+        <button (click)="verCita(cita.cliente)">
+          Ver cita
+        </button>
+
+      </div>
+
+    }
+
+  </section>
+
+
+  <!-- CONTADOR -->
+  <section class="estadistica">
+
+    <div class="tarjeta-contador">
+      <h2>{{citas.length}}</h2>
+      <p>Citas registradas</p>
+    </div>
+
+  </section>
+
+
+  <!-- PIE DE PÁGINA -->
+  <footer>
+    <p>Desarrollado por Jimena Rodríguez</p>
+  </footer>
+
+</div>

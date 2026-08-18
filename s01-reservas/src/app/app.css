@@ -1,0 +1,103 @@
+/* Contenedor principal de la aplicación */
+.contenedor {
+    max-width: 900px;
+    margin: 40px auto;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Encabezado */
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    color: #d10d76;
+}
+
+header p {
+    color: #555;
+}
+
+/* Tarjeta con contador */
+
+.estadistica {
+    margin-bottom: 25px;
+}
+
+.tarjeta-contador {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: #fcfcfc;
+    text-align: center;
+}
+
+.tarjeta-contador h2 {
+    color: #eb2595;
+    font-size: 30px;
+    margin: 5px;
+}
+
+.tarjeta-contador p {
+    color: #555;
+}
+
+/* Contiene el buscador y el botón */
+
+.acciones {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+/* Campo de búsqueda */
+
+input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+/* Botones */
+
+button {
+    padding: 10px 16px;
+    border: none;
+    border-radius: 6px;
+    background-color: #e420ca;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Contenedor de las tarjetas */
+
+.citas {
+    display: grid;
+    gap: 15px;
+}
+
+/* Tarjeta de cada cita */
+
+.tarjeta {
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: #fcfcfc;
+}
+
+/* Título de cada cita */
+
+.tarjeta h2 {
+    color: #eb25ba;
+}
+
+/* Pie de la aplicación */
+
+footer {
+    margin-top: 30px;
+    text-align: center;
+    color: #ff12cc;
+}
