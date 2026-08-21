@@ -1,0 +1,518 @@
+/* ================= CONFIGURACIÓN GENERAL ================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f7fb;
+  color: #263238;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 18px 8%;
+
+  background-color: #19376d;
+  color: white;
+
+  position: sticky;
+  top: 0;
+
+  z-index: 100;
+}
+
+.navbar h2 {
+  margin: 0;
+  font-size: 22px;
+}
+
+.menu {
+  display: flex;
+  gap: 20px;
+}
+
+.menu a {
+  color: white;
+  font-size: 15px;
+}
+
+.menu a:hover {
+  color: #8fd3ff;
+}
+
+
+/* ================= INICIO ================= */
+
+.inicio {
+  text-align: center;
+
+  padding: 75px 20px;
+
+  background-color: #dcecff;
+}
+
+.avatar {
+  width: 130px;
+  height: 130px;
+
+  margin: auto;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 50%;
+
+  background-color: #19376d;
+  color: white;
+
+  font-size: 38px;
+  font-weight: bold;
+
+  border: 5px solid #8fd3ff;
+}
+
+.inicio h1 {
+  margin: 20px 0 5px;
+
+  font-size: 42px;
+
+  color: #19376d;
+}
+
+.inicio h2 {
+  margin: 0 0 15px;
+
+  color: #315b94;
+
+  font-size: 22px;
+}
+
+.inicio p {
+  max-width: 650px;
+
+  margin: auto;
+
+  line-height: 1.7;
+
+  color: #455a64;
+}
+
+
+/* ================= BOTONES ================= */
+
+.botones {
+  margin-top: 25px;
+}
+
+.boton {
+  display: inline-block;
+
+  margin: 5px;
+
+  padding: 11px 20px;
+
+  border-radius: 8px;
+
+  font-weight: bold;
+}
+
+.principal {
+  background-color: #19376d;
+  color: white;
+}
+
+.principal:hover {
+  background-color: #315b94;
+
+  transform: translateY(-2px);
+}
+
+.secundario {
+  border: 2px solid #19376d;
+
+  color: #19376d;
+}
+
+.secundario:hover {
+  background-color: #19376d;
+  color: white;
+}
+
+
+/* ================= SECCIONES ================= */
+
+.seccion {
+  max-width: 1000px;
+
+  margin: auto;
+
+  padding: 65px 25px;
+}
+
+.seccion h2 {
+  margin-bottom: 10px;
+
+  color: #19376d;
+
+  font-size: 30px;
+}
+
+.seccion > p {
+  color: #607d8b;
+}
+
+
+/* ================= SOBRE MÍ ================= */
+
+.sobre-mi {
+  display: grid;
+
+  grid-template-columns: 180px 1fr;
+
+  gap: 35px;
+
+  align-items: center;
+
+  margin-top: 30px;
+}
+
+.sobre-icono {
+  width: 180px;
+  height: 180px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 20px;
+
+  background-color: #e4f2ff;
+
+  font-size: 60px;
+}
+
+.sobre-mi h3 {
+  color: #315b94;
+}
+
+.sobre-mi p {
+  color: #607d8b;
+
+  line-height: 1.7;
+}
+
+
+/* ================= FONDO ================= */
+
+.fondo {
+  max-width: none;
+
+  padding-left: 8%;
+  padding-right: 8%;
+
+  background-color: #eaf3ff;
+}
+
+
+/* ================= HABILIDADES ================= */
+
+.habilidades {
+  max-width: 1000px;
+
+  margin-top: 30px;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 15px;
+}
+
+.habilidad {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 16px;
+
+  background-color: white;
+
+  border: 1px solid #d5e2f0;
+
+  border-radius: 10px;
+
+  transition: 0.3s;
+}
+
+.habilidad:hover {
+  transform: translateY(-4px);
+
+  box-shadow: 0 5px 12px #cfd8e3;
+}
+
+.habilidad span {
+  width: 30px;
+  height: 30px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 50%;
+
+  background-color: #19376d;
+
+  color: white;
+}
+
+.habilidad p {
+  margin: 0;
+
+  font-weight: bold;
+}
+
+
+/* ================= PROYECTOS ================= */
+
+.proyectos {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 20px;
+
+  margin-top: 30px;
+}
+
+.proyecto {
+  padding: 22px;
+
+  background-color: white;
+
+  border: 1px solid #dbe5ef;
+
+  border-radius: 12px;
+
+  transition: 0.3s;
+}
+
+.proyecto:hover {
+  transform: translateY(-5px);
+
+  box-shadow: 0 7px 15px #d5dde7;
+}
+
+.numero {
+  color: #6c8bb5;
+
+  font-size: 13px;
+}
+
+.proyecto h3 {
+  color: #19376d;
+
+  margin-bottom: 10px;
+}
+
+.proyecto p {
+  min-height: 80px;
+
+  color: #607d8b;
+
+  line-height: 1.6;
+}
+
+.proyecto a {
+  color: #1976a8;
+
+  font-weight: bold;
+}
+
+.proyecto a:hover {
+  color: #19376d;
+}
+
+
+/* ================= CONTACTO ================= */
+
+.contacto {
+  padding: 65px 8%;
+
+  text-align: center;
+
+  background-color: #19376d;
+
+  color: white;
+}
+
+.contacto h2 {
+  margin: 0;
+
+  font-size: 30px;
+}
+
+.contacto > p {
+  color: #d9e8f7;
+}
+
+.contacto-datos {
+  max-width: 900px;
+
+  margin: 30px auto 0;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 15px;
+}
+
+.contacto-datos div {
+  padding: 20px;
+
+  border-radius: 10px;
+
+  background-color: #254982;
+}
+
+.contacto-datos strong {
+  color: #8fd3ff;
+}
+
+.contacto-datos p {
+  margin-bottom: 0;
+
+  font-size: 14px;
+}
+
+
+/* ================= FOOTER ================= */
+
+footer {
+  padding: 30px 8%;
+
+  text-align: center;
+
+  background-color: #10264d;
+
+  color: white;
+}
+
+footer h3 {
+  margin-bottom: 5px;
+
+  color: #8fd3ff;
+}
+
+footer p {
+  color: #c7d5e5;
+}
+
+.footer-menu {
+  margin: 20px 0;
+
+  display: flex;
+
+  justify-content: center;
+
+  gap: 20px;
+
+  flex-wrap: wrap;
+}
+
+.footer-menu a {
+  color: white;
+}
+
+.footer-menu a:hover {
+  color: #8fd3ff;
+}
+
+footer hr {
+  border: none;
+
+  border-top: 1px solid #38537a;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 750px) {
+
+  .navbar {
+    flex-direction: column;
+
+    gap: 15px;
+  }
+
+  .menu {
+    flex-wrap: wrap;
+
+    justify-content: center;
+  }
+
+  .inicio h1 {
+    font-size: 34px;
+  }
+
+  .sobre-mi {
+    grid-template-columns: 1fr;
+
+    text-align: center;
+  }
+
+  .sobre-icono {
+    margin: auto;
+  }
+
+  .habilidades {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .proyectos {
+    grid-template-columns: 1fr;
+  }
+
+  .contacto-datos {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+
+@media (max-width: 500px) {
+
+  .habilidades {
+    grid-template-columns: 1fr;
+  }
+
+  .botones {
+    display: flex;
+
+    flex-direction: column;
+  }
+
+  .boton {
+    margin: 5px 0;
+  }
+
+}

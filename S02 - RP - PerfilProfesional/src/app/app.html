@@ -1,0 +1,237 @@
+<!-- ================= NAVBAR ================= -->
+
+<nav class="navbar">
+
+  <h2>Yojana Aburto</h2>
+
+  <div class="menu">
+    <a href="#inicio">Inicio</a>
+    <a href="#sobre-mi">Sobre mí</a>
+    <a href="#habilidades">Habilidades</a>
+    <a href="#proyectos">Proyectos</a>
+    <a href="#contacto">Contacto</a>
+  </div>
+
+</nav>
+
+
+<!-- ================= INICIO ================= -->
+
+<section id="inicio" class="inicio">
+
+  <div class="avatar">
+    YA
+  </div>
+
+  <h1>{{ nombre }}</h1>
+
+  <h2>{{ profesion }}</h2>
+
+  <p>{{ descripcion }}</p>
+
+  <div class="botones">
+
+    <!-- GITHUB -->
+    <a
+      class="boton principal"
+      href="https://github.com/JimenaAburtoDev"
+      target="_blank"
+      rel="noopener noreferrer">
+      Ver mi GitHub
+    </a>
+
+    <a
+      class="boton secundario"
+      href="#contacto">
+      Contactarme
+    </a>
+
+  </div>
+
+</section>
+
+
+<!-- ================= SOBRE MÍ ================= -->
+
+<section id="sobre-mi" class="seccion">
+
+  <h2>Sobre mí</h2>
+
+  <div class="sobre-mi">
+
+    <div class="sobre-icono">
+      💻
+    </div>
+
+    <div>
+
+      <h3>¿Quién soy?</h3>
+
+      <p>
+        Soy estudiante de Análisis de Sistemas interesada en la
+        tecnología y en aprender nuevas herramientas para desarrollar
+        soluciones digitales.
+      </p>
+
+      <h3>¿Qué estudio?</h3>
+
+      <p>
+        Actualmente estoy aprendiendo programación, desarrollo web,
+        bases de datos y diferentes tecnologías que me ayudan a
+        fortalecer mis conocimientos en el instituto Valle Grande.
+      </p>
+
+      <h3>Mis intereses</h3>
+
+      <p>
+        Me interesa especialmente el desarrollo de aplicaciones web
+        y continuar aprendiendo para crear proyectos útiles y fáciles
+        de utilizar.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= HABILIDADES ================= -->
+
+<section id="habilidades" class="seccion fondo">
+
+  <h2>Habilidades</h2>
+
+  <p>
+    Tecnologías que conozco o estoy aprendiendo:
+  </p>
+
+  <div class="habilidades">
+
+    @for (habilidad of habilidades; track habilidad) {
+
+      <div class="habilidad">
+
+        <span>✓</span>
+
+        <p>{{ habilidad }}</p>
+
+      </div>
+
+    }
+
+  </div>
+
+</section>
+
+
+<!-- ================= PROYECTOS ================= -->
+
+<section id="proyectos" class="seccion">
+
+  <h2>Mis proyectos</h2>
+
+  <p>
+    Algunos proyectos realizados durante mi aprendizaje:
+  </p>
+
+  <div class="proyectos">
+
+    @for (proyecto of proyectos; track proyecto.nombre) {
+
+      <article class="proyecto">
+
+        <span class="numero">
+          Proyecto {{ $index + 1 }}
+        </span>
+
+        <h3>{{ proyecto.nombre }}</h3>
+
+        <p>
+          {{ proyecto.descripcion }}
+        </p>
+
+        <a
+          [href]="proyecto.enlace"
+          target="_blank"
+          rel="noopener noreferrer">
+          Ver proyecto →
+        </a>
+
+      </article>
+
+    }
+
+  </div>
+
+</section>
+
+
+<!-- ================= CONTACTO ================= -->
+
+<section id="contacto" class="contacto">
+
+  <h2>Contacto</h2>
+
+  <p>
+    Puedes comunicarte conmigo mediante:
+  </p>
+
+  <div class="contacto-datos">
+
+    <div>
+      <strong>📧 Correo</strong>
+      <p>{{ correo }}</p>
+    </div>
+
+    <div>
+      <strong>📍 Ubicación</strong>
+      <p>{{ ubicacion }}</p>
+    </div>
+
+    <div>
+      <strong>💻 GitHub</strong>
+
+      <p>
+        <a
+          href="https://github.com/JimenaAburtoDev"
+          target="_blank"
+          rel="noopener noreferrer">
+          Mi perfil profesional
+        </a>
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+  <h3>{{ nombre }}</h3>
+
+  <p>
+    Estudiante de Análisis de Sistemas
+  </p>
+
+  <div class="footer-menu">
+
+    <a href="#inicio">Inicio</a>
+    <a href="#sobre-mi">Sobre mí</a>
+    <a href="#habilidades">Habilidades</a>
+    <a href="#proyectos">Proyectos</a>
+    <a href="#contacto">Contacto</a>
+
+  </div>
+
+  <hr>
+
+  <p>
+    2026 {{ nombre }} · Perfil Profesional
+  </p>
+
+</footer>
