@@ -1,0 +1,33 @@
+.contenedor{
+  background:#f4f7fb;
+  min-height:100vh;
+  padding:40px 7%;
+}
+
+.hero{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:35px;
+}
+
+.hero h1{
+  color:#19376d;
+  font-size:40px;
+  margin:0;
+}
+
+.subtitulo{
+  color:#315b94;
+  font-weight:bold;
+  font-size:13px;
+}
+
+.hero button{
+  background:#19376d;
+  color:white;
+  border:none;
+  padding:14px 22px;
+  border-radius:10px;
+  cursor:pointer;
+}

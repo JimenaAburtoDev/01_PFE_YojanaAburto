@@ -1,0 +1,44 @@
+<div class="formulario">
+
+  <h2>
+    {{productoEditar ? 'Editar Producto' : 'Registrar Producto'}}
+  </h2>
+
+  <input
+    type="text"
+    placeholder="Nombre"
+    [(ngModel)]="producto.nombre">
+
+  <select [(ngModel)]="producto.categoria">
+
+    <option value="">Seleccione categoría</option>
+
+    <option>Tecnología</option>
+    <option>Accesorios</option>
+    <option>Oficina</option>
+
+  </select>
+
+  <input
+    type="number"
+    placeholder="Precio"
+    [(ngModel)]="producto.precio">
+
+  <input
+    type="number"
+    placeholder="Stock"
+    [(ngModel)]="producto.stock">
+
+  <div class="acciones">
+
+    <button class="cancelar" (click)="cerrarFormulario()">
+      Cancelar
+    </button>
+
+    <button class="guardar" (click)="guardarProducto()">
+      {{productoEditar ? 'Actualizar' : 'Guardar'}}
+    </button>
+
+  </div>
+
+</div>

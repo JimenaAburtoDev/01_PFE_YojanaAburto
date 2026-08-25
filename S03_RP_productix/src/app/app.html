@@ -1,0 +1,36 @@
+<app-navbar></app-navbar>
+
+<main class="contenedor">
+
+  <section class="hero">
+
+    <div>
+      <p class="subtitulo">SISTEMA DE GESTIÓN</p>
+      <h1>Productix</h1>
+
+      <p>
+        Administra productos de manera rápida y sencilla.
+      </p>
+    </div>
+
+    <button (click)="abrirFormulario()">
+      + Registrar Producto
+    </button>
+
+  </section>
+
+  @if(mostrarFormulario){
+
+    <app-formulario
+      [productoEditar]="productoEditar"
+      (guardar)="guardarProducto($event)"
+      (cerrar)="cerrarFormulario()">
+    </app-formulario>
+
+  }
+
+  <app-lista
+    (editar)="editarProducto($event)">
+  </app-lista>
+
+</main>

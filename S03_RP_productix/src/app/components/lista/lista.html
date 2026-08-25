@@ -1,0 +1,25 @@
+<section class="lista" id="productos">
+
+  <div class="encabezado">
+
+    <h2>Productos Registrados</h2>
+
+    <span>{{productos.length}} productos</span>
+
+  </div>
+
+  <div class="grid">
+
+    @for(producto of productos; track producto.id){
+
+      <app-card
+        [producto]="producto"
+        (editar)="editarProducto($event)"
+        (eliminar)="eliminarProducto($event)">
+      </app-card>
+
+    }
+
+  </div>
+
+</section>
