@@ -1,0 +1,94 @@
+.tarjeta {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 1.1rem 1.25rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+  transition: transform 0.15s ease, box-shadow 0.15s ease,
+  background 0.15s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.tarjeta:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+}
+
+.tarjeta h3 {
+  margin: 0 0 0.4rem;
+  font-size: 1.08rem;
+  font-weight: 700;
+  color: #111827;
+}
+
+.tarjeta p {
+  margin: 0.15rem 0;
+  font-size: 0.87rem;
+  color: #4b5563;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.etiqueta {
+  display: inline-block;
+  align-self: flex-start;
+  margin-top: 0.75rem;
+  padding: 0.3rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.76rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  background: #f3f4f6;
+  color: #374151;
+}
+
+
+.tarjeta {
+  border: 1px solid #f3f4f6;
+}
+
+
+.tarjeta.laboral {
+  background: #eef2ff;
+  border-color: #c7d2fe;
+}
+
+.tarjeta.laboral h3 {
+  color: #3730a3;
+}
+
+.tarjeta.laboral .etiqueta {
+  background: #4f46e5;
+  color: #ffffff;
+}
+
+
+.tarjeta.familia {
+  background: #ecfdf5;
+  border-color: #a7f3d0;
+}
+
+.tarjeta.familia h3 {
+  color: #065f46;
+}
+
+.tarjeta.familia .etiqueta {
+  background: #059669;
+  color: #ffffff;
+}
+
+.tarjeta.estudios {
+  background: #fffbeb;
+  border-color: #fde68a;
+}
+
+.tarjeta.estudios h3 {
+  color: #92400e;
+}
+
+.tarjeta.estudios .etiqueta {
+  background: #d97706;
+  color: #ffffff;
+}

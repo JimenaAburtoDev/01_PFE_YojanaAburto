@@ -1,0 +1,15 @@
+.lista-contactos {
+  max-width: 900px;
+  margin: 0 auto 2rem;
+  padding: 0 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 1rem;
+}
+
+.vacio {
+  grid-column: 1 / -1;
+  text-align: center;
+  color: #9ca3af;
+  padding: 2rem 0;
+}

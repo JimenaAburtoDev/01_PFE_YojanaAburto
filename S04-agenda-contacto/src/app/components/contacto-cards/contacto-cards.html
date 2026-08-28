@@ -1,0 +1,19 @@
+<div class="tarjeta"
+     [class.laboral]="contacto.tipo === 'Trabajo'"
+     [class.familia]="contacto.tipo === 'Familia'"
+     [class.estudios]="contacto.tipo === 'Estudios'">
+  <h3>{{ contacto.nombre }}</h3>
+  <p>📞 {{ contacto.telefono }}</p>
+  <p>✉️ {{ contacto.correo }}</p>
+  <p>Tipo: {{ contacto.tipo }}</p>
+
+  @if (contacto.tipo === 'Trabajo') {
+    <span class="etiqueta">💼 Contacto laboral</span>
+  } @else if (contacto.tipo === 'Familia') {
+    <span class="etiqueta">👪 Contacto familiar</span>
+  } @else if (contacto.tipo === 'Estudios') {
+    <span class="etiqueta">🎓 Contacto de estudios</span>
+  } @else {
+    <span class="etiqueta">👤 Contacto personal</span>
+  }
+</div>

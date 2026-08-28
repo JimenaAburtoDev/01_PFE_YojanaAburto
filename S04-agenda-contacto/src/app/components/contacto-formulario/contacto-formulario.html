@@ -1,0 +1,16 @@
+<div class="formulario">
+  <input type="text" [(ngModel)]="nombre" placeholder="Nombre" />
+  <input type="text" [(ngModel)]="telefono" placeholder="Teléfono" />
+  <input type="email" [(ngModel)]="correo" placeholder="Correo" />
+
+  <select [(ngModel)]="tipo">
+    <option value="" disabled selected>Selecciona tipo</option>
+    @for (t of tiposDisponibles; track t) {
+      <option [value]="t">{{ t }}</option>
+    }
+  </select>
+
+  <button [disabled]="formularioInvalido" (click)="agregar()">
+    Agregar Contacto
+  </button>
+</div>

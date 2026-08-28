@@ -1,0 +1,9 @@
+<div class="lista-contactos">
+  @if (contactos.length === 0) {
+    <p class="vacio">Aún no hay contactos registrados.</p>
+  } @else {
+    @for (contacto of contactos; track contacto.correo) {
+      <app-contacto-cards [contacto]="contacto"></app-contacto-cards>
+    }
+  }
+</div>
