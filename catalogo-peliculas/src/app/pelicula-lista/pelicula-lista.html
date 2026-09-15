@@ -1,0 +1,87 @@
+<div class="pagina">
+
+  <header class="topbar">
+    <span class="topbar-icon">🎬</span>
+    <div>
+      <h1>Catálogo de Películas</h1>
+      <p>Explora y administra tus películas favoritas</p>
+    </div>
+  </header>
+
+  <section class="panel">
+
+    <div class="panel-header">
+      <div>
+        <h2>Mis películas</h2>
+        <p>Lista de películas disponibles</p>
+      </div>
+      <button class="btn-primary" (click)="toggleFormulario()">
+        + Nueva película
+      </button>
+    </div>
+
+    <div class="stats">
+      <div class="stat-card">
+        <span class="stat-icon">🎞️</span>
+        <div>
+          <strong>{{ peliculas.length }}</strong>
+          <p>Total</p>
+        </div>
+      </div>
+
+      <div class="stat-card">
+        <span class="stat-icon">⭐</span>
+        <div>
+          <strong>{{ contarMuyRecomendadas() }}</strong>
+          <p>Muy recomendadas</p>
+        </div>
+      </div>
+
+      <div class="stat-card">
+        <span class="stat-icon">👍</span>
+        <div>
+          <strong>{{ contarRecomendadas() }}</strong>
+          <p>Recomendadas</p>
+        </div>
+      </div>
+    </div>
+
+    @if (mostrarFormulario) {
+      <form class="formulario" (ngSubmit)="agregarPelicula()">
+        <input type="text" placeholder="Título" [(ngModel)]="nuevoTitulo" name="titulo" required>
+        <input type="text" placeholder="Género" [(ngModel)]="nuevoGenero" name="genero" required>
+        <input type="number" placeholder="Año" [(ngModel)]="nuevoAnio" name="anio" required>
+        <input type="number" placeholder="Calificación (0-10)" step="0.1" min="0" max="10"
+               [(ngModel)]="nuevaCalificacion" name="calificacion" required>
+        <button type="submit" class="btn-primary">Agregar</button>
+      </form>
+    }
+
+    @if (peliculas.length === 0) {
+      <p class="vacio">No hay películas registradas.</p>
+    } @else {
+      <ul class="lista">
+        @for (pelicula of peliculas; track pelicula.id) {
+          <li class="fila">
+            <span class="fila-icon">🎬</span>
+
+            <div class="fila-info">
+              <h3>{{ pelicula.titulo }}</h3>
+              <p>{{ pelicula.genero }} · {{ pelicula.anio }}</p>
+              <p class="fila-nota">⭐ {{ pelicula.calificacion }}/10</p>
+            </div>
+
+            @if (pelicula.calificacion >= 9) {
+              <span class="badge buena">Muy recomendada</span>
+            } @else if (pelicula.calificacion >= 7) {
+              <span class="badge media">Recomendada</span>
+            } @else {
+              <span class="badge baja">Calificación baja</span>
+            }
+          </li>
+        }
+      </ul>
+    }
+
+  </section>
+</div>

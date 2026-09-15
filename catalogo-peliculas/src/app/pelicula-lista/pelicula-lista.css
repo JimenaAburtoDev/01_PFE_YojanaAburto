@@ -1,0 +1,201 @@
+.pagina {
+  min-height: 100vh;
+  background: #f3f4f6;
+  font-family: system-ui, sans-serif;
+}
+
+/* Barra superior */
+.topbar {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 1.1rem 2rem;
+}
+
+.topbar-icon {
+  font-size: 1.6rem;
+}
+
+.topbar h1 {
+  margin: 0;
+  font-size: 1.3rem;
+  color: #1e293b;
+}
+
+.topbar p {
+  margin: 0.1rem 0 0 0;
+  font-size: 0.85rem;
+  color: #6b7280;
+}
+
+/* Panel principal */
+.panel {
+  max-width: 900px;
+  margin: 2rem auto;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  padding: 1.8rem;
+}
+
+.panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+}
+
+.panel-header h2 {
+  margin: 0;
+  font-size: 1.15rem;
+  color: #1e293b;
+}
+
+.panel-header p {
+  margin: 0.2rem 0 0 0;
+  font-size: 0.85rem;
+  color: #6b7280;
+}
+
+.btn-primary {
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0.6rem 1.1rem;
+  font-weight: 600;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background: #1e4fc4;
+}
+
+/* Tarjetas de estadísticas */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.stat-card {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  background: #f9fafb;
+  border-radius: 12px;
+  padding: 0.9rem 1rem;
+}
+
+.stat-icon {
+  font-size: 1.4rem;
+}
+
+.stat-card strong {
+  display: block;
+  font-size: 1.3rem;
+  color: #1e293b;
+}
+
+.stat-card p {
+  margin: 0;
+  font-size: 0.78rem;
+  color: #6b7280;
+}
+
+/* Formulario */
+.formulario {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  background: #f9fafb;
+  border-radius: 12px;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.formulario input {
+  flex: 1 1 140px;
+  padding: 0.55rem 0.7rem;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 0.9rem;
+}
+
+/* Lista de películas */
+.lista {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.fila {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  border: 1px solid #eef0f2;
+  border-radius: 12px;
+  padding: 0.8rem 1rem;
+}
+
+.fila-icon {
+  font-size: 1.3rem;
+  background: #eef1fb;
+  border-radius: 8px;
+  padding: 0.4rem 0.55rem;
+}
+
+.fila-info {
+  flex: 1;
+}
+
+.fila-info h3 {
+  margin: 0;
+  font-size: 1rem;
+  color: #1e293b;
+}
+
+.fila-info p {
+  margin: 0.15rem 0 0 0;
+  font-size: 0.82rem;
+  color: #6b7280;
+}
+
+.fila-nota {
+  font-weight: 600;
+  color: #1e293b !important;
+}
+
+.badge {
+  font-size: 0.75rem;
+  padding: 0.25rem 0.7rem;
+  border-radius: 999px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.badge.buena {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.badge.media {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.badge.baja {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.vacio {
+  color: #6b7280;
+  font-style: italic;
+}
