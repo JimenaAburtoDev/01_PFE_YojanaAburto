@@ -1,0 +1,21 @@
+<div class="contenedor">
+  <header>
+    <h1>Gestión de Cursos</h1>
+    <p>CRUD en Angular consumiendo una API REST pública (crudcrud.com)</p>
+  </header>
+
+  <p class="alerta" *ngIf="mensajeError">{{ mensajeError }}</p>
+
+  <app-curso-form
+    [curso]="cursoEnEdicion"
+    (guardar)="onGuardar($event)"
+    (cancelar)="onCancelar()"
+  ></app-curso-form>
+
+  <app-curso-list
+    [cursos]="cursos"
+    [cargando]="cargando"
+    (editar)="onEditar($event)"
+    (eliminar)="onEliminar($event)"
+  ></app-curso-list>
+</div>

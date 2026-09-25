@@ -1,0 +1,78 @@
+.tarjeta {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 24px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  margin-top: 0;
+  font-size: 1.15rem;
+  color: #111827;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 12px;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 12px 10px;
+  border-bottom: 1px solid #e5e7eb;
+  font-size: 0.9rem;
+  vertical-align: top;
+}
+
+th {
+  color: #6b7280;
+  font-weight: 600;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.descripcion {
+  color: #6b7280;
+  font-size: 0.8rem;
+  margin-top: 2px;
+}
+
+.acciones-celda {
+  display: flex;
+  gap: 8px;
+  white-space: nowrap;
+}
+
+.btn {
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.btn-editar {
+  background-color: #dbeafe;
+  color: #1d4ed8;
+}
+
+.btn-editar:hover {
+  background-color: #bfdbfe;
+}
+
+.btn-eliminar {
+  background-color: #fee2e2;
+  color: #dc2626;
+}
+
+.btn-eliminar:hover {
+  background-color: #fecaca;
+}
+
+.vacio {
+  color: #6b7280;
+  font-size: 0.9rem;
+}

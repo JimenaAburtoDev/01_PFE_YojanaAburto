@@ -1,0 +1,50 @@
+<form class="tarjeta" [formGroup]="form" (ngSubmit)="onSubmit()">
+  <h2>{{ editando ? 'Editar curso' : 'Registrar nuevo curso' }}</h2>
+
+  <div class="grid">
+    <div class="campo">
+      <label for="nombre">Nombre del curso</label>
+      <input id="nombre" type="text" formControlName="nombre" placeholder="Ej: Angular Avanzado" />
+      <small class="error" *ngIf="campoInvalido('nombre')">Ingresa un nombre de al menos 3 caracteres.</small>
+    </div>
+
+    <div class="campo">
+      <label for="instructor">Instructor</label>
+      <input id="instructor" type="text" formControlName="instructor" placeholder="Ej: María Torres" />
+      <small class="error" *ngIf="campoInvalido('instructor')">El instructor es obligatorio.</small>
+    </div>
+
+    <div class="campo">
+      <label for="categoria">Categoría</label>
+      <input id="categoria" type="text" formControlName="categoria" placeholder="Ej: Desarrollo Web" />
+      <small class="error" *ngIf="campoInvalido('categoria')">La categoría es obligatoria.</small>
+    </div>
+
+    <div class="campo">
+      <label for="duracionHoras">Duración (horas)</label>
+      <input id="duracionHoras" type="number" formControlName="duracionHoras" min="1" />
+      <small class="error" *ngIf="campoInvalido('duracionHoras')">Ingresa una duración válida.</small>
+    </div>
+
+    <div class="campo">
+      <label for="precio">Precio (S/)</label>
+      <input id="precio" type="number" formControlName="precio" min="0" step="0.01" />
+      <small class="error" *ngIf="campoInvalido('precio')">Ingresa un precio válido.</small>
+    </div>
+
+    <div class="campo campo-ancho">
+      <label for="descripcion">Descripción</label>
+      <textarea id="descripcion" formControlName="descripcion" rows="3" placeholder="Breve descripción del contenido del curso"></textarea>
+      <small class="error" *ngIf="campoInvalido('descripcion')">Ingresa al menos 10 caracteres.</small>
+    </div>
+  </div>
+
+  <div class="acciones">
+    <button type="submit" class="btn btn-primario">
+      {{ editando ? 'Guardar cambios' : 'Registrar curso' }}
+    </button>
+    <button type="button" class="btn btn-secundario" *ngIf="editando" (click)="onCancelar()">
+      Cancelar
+    </button>
+  </div>
+</form>

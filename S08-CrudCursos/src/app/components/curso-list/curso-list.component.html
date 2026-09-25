@@ -1,0 +1,38 @@
+<div class="tarjeta">
+  <h2>Cursos registrados</h2>
+
+  <p *ngIf="cargando">Cargando cursos...</p>
+
+  <table *ngIf="!cargando && cursos.length > 0">
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Instructor</th>
+        <th>Categoría</th>
+        <th>Duración</th>
+        <th>Precio</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let curso of cursos">
+        <td>
+          <strong>{{ curso.nombre }}</strong>
+          <div class="descripcion">{{ curso.descripcion }}</div>
+        </td>
+        <td>{{ curso.instructor }}</td>
+        <td>{{ curso.categoria }}</td>
+        <td>{{ curso.duracionHoras }} h</td>
+        <td>S/ {{ curso.precio }}</td>
+        <td class="acciones-celda">
+          <button class="btn btn-editar" (click)="onEditar(curso)">Editar</button>
+          <button class="btn btn-eliminar" (click)="onEliminar(curso)">Eliminar</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p *ngIf="!cargando && cursos.length === 0" class="vacio">
+    Aún no hay cursos registrados. Usa el formulario de arriba para crear el primero.
+  </p>
+</div>
